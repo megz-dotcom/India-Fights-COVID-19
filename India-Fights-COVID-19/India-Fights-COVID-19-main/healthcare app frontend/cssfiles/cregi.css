@@ -1,0 +1,342 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  
+   font-family: 'Brush Script MT', cursive;
+
+}
+
+nav {
+  background: #1a1a1a;
+  padding: 5px 20px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+
+}
+.logo a:hover {
+  text-decoration: none;
+
+}
+.menu li {
+  font-size: 22px;
+  padding: 15px 5px;
+  white-space: nowrap;
+}
+.logo a,
+.toggle a {
+  font-size: 20px;
+}
+.button.secondary {
+  border-bottom: 1px #444 solid;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle {
+  order: 1;
+}
+.item.button {
+  order: 2;
+}
+.item {
+  width: 100%;
+  text-align: center;
+  order: 3;
+  display: none;
+}
+.item.active {
+  display: block;
+}
+
+/* Navbar Toggle */
+.toggle {
+  cursor:pointer;
+}
+.bars {
+  background: #999;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+.bars:before,
+.bars:after {
+  background: #999;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+.bars:before {
+  top: 5px;
+}
+.bars:after {
+  top: -5px;
+}
+
+/* Tablet menu */
+@media all and (min-width: 468px) {
+  .menu {
+      justify-content: center;
+  }
+
+  .logo {
+      flex: 1;
+  }
+
+  .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+  }
+  .toggle {
+      order: 2;
+  }
+  .button.secondary {
+      border: 0;
+  }
+  .button a {
+      padding: 7.5px 15px;
+      background: teal;
+      border: 1px #006d6d solid;
+      border-radius:50em;
+  }
+  .button.secondary a {
+      background: transparent;    
+  }
+  .button a:hover {
+      text-decoration: none;
+      transition:all .25s;
+  }
+  .button:not(.secondary) a:hover {
+      background: #006d6d;
+      border-color: #005959;
+  }
+  .button.secondary a:hover {
+      color: #ddd;
+  } 
+}
+
+/* Desktop menu */
+@media all and (min-width: 768px) {
+  .item {
+      display: block;
+      width: auto;
+  }
+  .toggle {
+      display: none;
+  }
+  .logo {
+      order: 0;
+  }
+  .item {
+      order: 1;
+  }
+  .button {
+      order: 2;
+  }
+  .menu li {
+      padding: 15px 10px;
+  }
+  .menu li.button {
+      padding-right: 0;
+  }
+}
+
+/*=============VOLUNTEER REGISTRATION===============*/
+.wrapper {
+    background-color: #fff;
+    width:500px;
+    padding: 25px;
+    margin: 50px auto 0;
+    border-top: 5px solid #f5ba1a;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    
+}
+.wrapper h2{
+    font-size: 24px;
+    line-height: 24px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.input-name{
+    width: 90%;
+    position: relative;
+    margin: 20px auto;
+    
+}
+.lock{
+    padding:8px 11px;
+}
+.name{
+    width: 45%;
+    padding:8px 0 8px 40px;
+}
+.input-name span{
+    margin-left: 35px;
+}
+.text-name{
+    width: 100%;
+    padding:8px 0 8px 40px;
+}
+.input-name i{
+    position: absolute;
+    font-size: 18px;
+    border-right: 1px solid #cccccc;
+}
+.email{
+    padding: 8px;
+}
+.text-name, .name{
+    border: 1px solid #cccccc;
+    outline: none;
+    -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      transition: all 0.30s ease-in-out;
+}
+.text-name:hover, .name:hover{
+    background-color: #fafafa;
+}
+.text-name:focus, .name:focus{
+    -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+      -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+      box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+      border: 1px solid #f5ba1a;
+      background: #fafafa;
+}
+.radio-button{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+ .gender {
+    margin-right: 1em;
+}
+.gender:before {
+    content: "";
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    margin-right: 0.5em;
+    border-radius: 100%;
+    vertical-align: -3px;
+    border: 2px solid #cccccc;
+    padding: 0.15em;
+    background-color: transparent;
+    background-clip: content-box;
+    transition: all 0.2s ease;
+  }
+
+  .radio-button:hover + .gender:before {
+    border-color: #000;
+  }
+  .radio-button:checked + .gender:before {
+    background-color:#000;
+    border-color: #000;
+  }
+
+  .region{
+    display: inline-block;
+    width: 100%;
+    height: 35px;
+    padding: 0px 15px;
+    cursor: pointer;
+    color: #7b7b7b;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    background: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.2s ease;
+}
+.region::-ms-expand{
+    display: none;
+}
+.region:hover, .region:focus{
+    color: #000;
+      background: #fafafa;
+      border-color: #000;
+      outline: none;
+}
+.arrow {
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-width: 8px 5px 0 5px;
+    border-style: solid;
+    border-color: #7b7b7b transparent transparent transparent;
+ }
+  
+.region:hover +.arrow, .region:focus +.arrow{
+      border-top-color: #000;
+}
+
+  @media (max-width: 480px) {
+      .wrapper{
+          width: 100%;
+      }
+      .input-name{
+          margin-bottom: -10px;
+      }
+      .name{
+          width: 100%;
+          padding:8px 0 8px 40px;
+          margin-bottom: 10px;
+      }
+      .input-name span{
+          padding: 0;
+          margin:0;
+      }
+  }
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:1rem 4rem;
+    border-radius: 5rem;
+    background:var(--red);
+    color:#ff66ff;
+    overflow: hidden;
+    position: relative;
+    top: 50%; left: 25%;
+    z-index: 0;
+    font-size: 1.7rem;
+
+}
+
+p,
+label {
+    font: 1rem 'Fira Sans', sans-serif;
+    padding: 10px 10px;
+}
+
+/*=============VOLUNTEER REGISTRATION===============*/
+

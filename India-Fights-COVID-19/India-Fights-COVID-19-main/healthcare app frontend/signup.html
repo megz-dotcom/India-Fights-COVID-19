@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER FORM</title>
+   <link rel="stylesheet" type="text/css" href="cssfiles/csignup.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body background="images/loginP.jpeg">
+
+   <div class="wrapper">
+      <h2>REGISTRATION FORM</h2>
+        <div class="form-conteniar">
+            <form action="signup_form.php" method="post">
+                <div class="input-name">
+                    <i class="fa fa-user lock"></i>
+                    <input type="text" name="fname" placeholder="First Name" required class="name">
+                    <span class="last">
+                    <i class="fa fa-user lock"></i>
+                    <input type="text" name="lname" placeholder="Last Name" required class="name">                    
+                    </span>
+                </div>
+                    
+                <div class="input-name">
+                        <i class="fa fa-phone lock"></i>
+                        <input type="text" name="phone" placeholder="Contact Number" required class="text-name">               
+                </div>
+
+                <div class="input-name">
+                       <i class="fa fa-id-card lock"></i>
+                       <input type="text" name="adhar" placeholder="  Adhar Number" required class="text-name">               
+                </div>
+
+                <div class="input-name">
+                      <i class="fa fa-map lock"></i>
+                      <input type="text" name="address" placeholder=" Address" required class="text-name">
+                </div>
+
+                <div class="input-name">
+                       <i class="fa fa-envelope email"></i>
+                       <input type="email" name="email" placeholder="Email" required class="text-name">                      
+                </div>
+                
+                <div class="input-name">
+                    <i class="fa fa-lock lock"></i>
+                    <input type="password" name="password" placeholder="Password" required class="text-name">
+                </div>
+
+                <div class="input-name">
+                    <label>Gender: </label>
+                    <input type="radio" name="gender" value="male" id="male" class="radio-button">
+                    <label for="male" class="gender">Male</label>
+                    <input type="radio" name="gender" value="female" id="female" class="radio-button">
+                    <label for="female" class="gender">Female</label>
+                    <input type="radio" name="gender" value="other" id="other" class="radio-button">
+                    <label for="other" class="gender">Other</label>
+                </div>
+
+                <div class="input-name">
+                    <select class="region" name="state">
+                        <option>Select a State</option>
+                        <option value="Andra Pradesh">Andra Pradesh</option>
+                        <option value="Chattisgarh">Chattisgarh</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Maharastra">Maharastra</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="West Bengal">West Bengal</option>
+                      </select>
+                    <div class="arrow"> </div>
+                </div>
+
+                <div class="input-name">
+                        <input type="submit" value="Register" name="save" class="btn"></input>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
