@@ -1,0 +1,11 @@
+{
+  "name": "India-Fights-COVID-19-project",
+  "version": "1.0.0",
+  "description": "A simple HTML and CSS project",
+  "scripts": {
+    "deploy": "xcopy * \"C:\JenkinsWorspace\prod\" /E /I /Y",
+    "clean": "del /Q \"C:\JenkinsWorspace\prod\\*\""
+  },
+  "author": "Megha Magadumakar",
+  "license": "NIL"
+}
