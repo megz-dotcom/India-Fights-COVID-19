@@ -1,0 +1,20 @@
+name: Trigger Jenkins Job and Deploy
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to trigger on
+
+jobs:
+  trigger-jenkins:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Trigger Jenkins Job
+      run: |
+        curl -X POST "https://bb1e-45-252-75-68.ngrok-free.app/view/gitActionProject/job/gitWebHook/build?token=110078fdd442ea40aee1b502ec9b29430b"
+      env:
+        JENKINS_USER: ${{ secrets.JENKINS_USER }}
+        JENKINS_TOKEN: ${{ secrets.JENKINS_TOKEN }}
+      headers:
+        Authorization: Basic $(echo -n "$JENKINS_USER:$JENKINS_TOKEN" | base64)
