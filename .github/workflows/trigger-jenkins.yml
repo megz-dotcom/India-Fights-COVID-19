@@ -16,5 +16,4 @@ jobs:
       env:
         JENKINS_USER: ${{ secrets.JENKINS_USER }}
         JENKINS_TOKEN: ${{ secrets.JENKINS_TOKEN }}
-      headers:
-        Authorization: Basic $(echo -n "$JENKINS_USER:$JENKINS_TOKEN" | base64)
+      
