@@ -12,8 +12,8 @@ jobs:
     steps:
     - name: Trigger Jenkins Job
       run: |
-        CRUMB=$(curl -u "$JENKINS_USER:$JENKINS_TOKEN" "https://bb1e-45-252-75-68.ngrok-free.app/crumbIssuer/api/json" | jq -r '.crumb')
-        curl -X POST "https://bb1e-45-252-75-68.ngrok-free.app/view/gitActionProject/job/gitWebHook/build?token=110078fdd442ea40aee1b502ec9b29430b" \
+        CRUMB=$(curl -u "$JENKINS_USER:$JENKINS_TOKEN" "https://811a-45-252-75-68.ngrok-free.app/crumbIssuer/api/json" | jq -r '.crumb')
+        curl -X POST "https://811a-45-252-75-68.ngrok-free.app/view/gitActionProject/job/gitWebHook/build?token=110078fdd442ea40aee1b502ec9b29430b" \
         --user "$JENKINS_USER:$JENKINS_TOKEN" \
         -H "$JENKINS_CRUMB_FIELD:$CRUMB"
       env:
